@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+	<style>
+	body{
+		background-color : blue;
+		}
+	h1{
+		color : white;
+		margin-left : 40px;
+		}
+	</style>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "101d35cd-af8b-47bf-a2f9-0ad2a32bbd23", // The ID of this integration.
+          region: "jp-tok", // The region your integration is hosted in.
+          serviceInstanceID: "e04a7a9d-3c4a-4cc1-b3e6-bb35bd736d8d", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</head>
+<body>
+    <h1>CHATBOT PAGE..!</h1>
+</body>
+</html>
